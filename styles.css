@@ -1,0 +1,343 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap'); */
+
+
+/* Global Properties */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-weight: 400;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --pale-cyan: hsl(193, 100%, 96%)
+    --dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --dark-cyan: hsl(192, 100%, 9%);
+}
+
+/* -----Hero Section----- */
+
+header {
+    height: 100vh;
+    background: var(--pale-cyan) url("assets/images/bg-hero-desktop.svg") no-repeat;
+    padding: 36px 59px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
+nav .navbar .logo{
+    height: 26px;
+    width: auto;
+}
+.btn {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 17px 64px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, .16) 0 1px 5px;
+}
+.btn.btn1 {
+    background-color: #ffffff;
+}
+.btn.btn2 {
+    background: var(--pink);
+    color: #ffffff;
+}
+.btn:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+.h-text {
+    display: flex;
+    align-items: center;
+}
+.h-text .text-info {
+    flex: 1;
+}
+.h-text .text-info h1{
+    line-height: 49px;
+}
+.h-text .text-info p{
+    margin: 30px 0;
+    line-height: 27px;
+}
+.h-text .illustration {
+    flex: 1;
+}
+.h-text .illustration img{
+    width: 100%;
+}
+
+/* -----Features Section----- */
+
+.features-section {
+    padding: 62px 59px 200px 59px;
+    position: relative;
+}
+.features {
+    display: flex;
+    height: 400px;
+    margin-bottom: 45px;
+    padding: 55px 55px 55px 100px;
+    box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+    border-radius: 20px;
+}
+.features .text-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.features .text-info p {
+    color: var(--grayish-blue);
+    line-height: 1.79rem;
+    margin-top: 17px;
+}
+.features .illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.features .illustration img {
+    height: 90%;
+}
+.features:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.features:nth-child(even) .illustration {
+    justify-content: flex-start;
+}
+
+/* -----Call To Action----- */
+
+.cta {
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+    max-width: 600px; /* makes the box smaller */
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    flex-direction: column;
+    position: absolute; /* it will make the box go into the footer to stay behind it */
+    bottom: -80px; /* This makes the box move up to the half point of the button. If bottom = 0, the box will lay on top of the last box ahead of it */
+    z-index: 10; /* to make the box stay on top of the footer, male it higher but it will be transparent */
+    background: #ffffff; /* to make the transparent bottom part of the box, become revealed */
+    left: 50%; /* shifts the box to the right side but with the start of it at the centre of the feature section */
+    /* margin: auto;  makes the box centre aligned if you don't add position */
+    transform: translateX(-50%); /* this is to translate along the X-axis to bring the box back halfway so that it can be at the dead centre */
+}
+.cta h2 {
+    margin-bottom: 28px;
+}
+
+/* -----Footer Section----- */
+
+footer {
+    background: var(--dark-cyan);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 70px 70px 70px;
+    font-size: 14px;
+    position: relative;
+}
+footer .contact {
+    max-width: 350px;
+    width: 100%;
+    margin-right: 2rem;
+}
+footer .contact .logo {
+    filter: brightness(0) invert(); /*to WHITE */
+
+    /* filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%); to make the huddle logo from DARK CYAN to ASH */
+
+    /* filter: brightness(0) invert(1); OR filter: invert() brightness(0); to BLACK */
+
+    /* filter: invert(1); to EDITED/ TRANSPARENT LIGHT */
+
+    /* height: 56px; */
+}
+footer .contact .logo img {
+    height: 26px;
+}
+footer .contact .col {
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+}
+footer .contact .col img {
+    height: 14px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+#text {
+    line-height: 1.4rem;
+    margin-top: 11.4px;
+}
+#phone {
+    margin: 10px 0;
+}
+#call img {
+    margin-top: 10px;
+}
+#place {
+    margin-top: 17px;
+}
+.footer-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around; /* wider space before & after the links */
+    width: 100%; /* made the links take their position (spread out to occupy the entire space) */
+}
+.footer-links .links {
+    display: flex;
+    flex-direction: column;
+}
+.footer-links .links a {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.footer-links .links a:hover {
+    text-decoration: underline;
+}
+footer .socials {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#facebook, #twitter, #instagram {
+    margin: 0 .7rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: .8rem;
+}
+.copyright {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 12px;
+}
+
+/* -----Mobile Responsiveness----- */
+
+@media (max-width: 376px) {
+    header {
+        padding: 20px;
+        background: var(--pale-cyan) url("assets/images/bg-hero-mobile.svg") no-repeat;
+    }
+
+    .btn {
+        padding: 9px 28px;
+    }
+
+    nav .navbar .logo {
+        height: 19px;
+    }
+    .h-text {
+        flex-direction: column;
+    }
+    .h-text .text-info {
+        text-align: center;
+        margin: 3.5rem 0;
+    }
+
+    .h-text .text-info h1 {
+        font-size: 25px;
+        line-height: 2.7rem;
+    }
+
+    .h-text .text-info p {
+        font-size: 18px;
+        line-height: 1.9rem;
+    }
+
+    .btn.btn2 {
+        padding: 18px 69px;
+        font-size: 15px;
+    }
+
+    .features-section {
+        padding: 62px 20px 200px 20px;
+    }
+
+    .features-section h2 {
+        font-size: 25px;
+        margin-top: 2.7rem;
+    }
+
+    .features {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: 500px;
+        padding: 30px 20px;
+    }
+
+    .features .illustration img {
+        height: auto;
+        width: 90%;
+    }
+
+    .features:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .cta {
+        width: 340px;
+        padding: 10px 0 30px 0;
+    }
+
+    .cta h2 {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 150px 30px 70px 30px;
+        letter-spacing: .6px;
+    }
+
+    footer .contact .logo img {
+        height: 26px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    footer .socials {
+        align-self: center;
+    }
+
+    .copyright {
+        right: 50%;
+        transform: translateX(50%);
+        max-width: 300px;
+        width: 100%;
+    }
+
+}
+
+    /* Given that the features is given an id and with the flex-direction property of the flow; row-reverse and #reverse .illustration {
+        justify-content: flex-start;
+    }, when the media query for column-reverse is called, the h2 will be underneath the p. Meanwhile, if ".features:nth-child(even)" is used, it will be normal */

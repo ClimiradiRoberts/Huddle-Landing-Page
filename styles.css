@@ -31,7 +31,8 @@ h1, h2, h3 {
 
 header {
     height: 100vh;
-    background: var(--pale-cyan) url("assets/images/bg-hero-desktop.svg") no-repeat;
+    background: url("assets/images/bg-hero-desktop.svg") no-repeat;
+    background-color: hsl(193, 100%, 96%);
     padding: 36px 59px;
 }
 nav {
@@ -242,7 +243,8 @@ footer .socials {
 @media (max-width: 376px) {
     header {
         padding: 20px;
-        background: var(--pale-cyan) url("assets/images/bg-hero-mobile.svg") no-repeat;
+        background: url("assets/images/bg-hero-mobile.svg") no-repeat;
+        background-color: hsl(193, 100%, 96%);
     }
 
     .btn {
@@ -276,7 +278,7 @@ footer .socials {
     }
 
     .features-section {
-        padding: 62px 20px 200px 20px;
+        padding: 75px 20px 200px 20px;
     }
 
     .features-section h2 {

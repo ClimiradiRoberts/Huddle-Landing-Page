@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
 
 
 /* Global Properties */
@@ -87,7 +87,7 @@ nav .navbar .logo{
 /* -----Features Section----- */
 
 .features-section {
-    padding: 62px 59px 200px 59px;
+    padding: 2px 59px 200px 59px;
     position: relative;
 }
 .features {
@@ -123,7 +123,7 @@ nav .navbar .logo{
 }
 .features:nth-child(even) .illustration {
     justify-content: flex-start;
-}
+ }
 
 /* -----Call To Action----- */
 
@@ -266,7 +266,7 @@ footer .socials {
     }
 
     .h-text .text-info p {
-        font-size: 18px;
+        font-size: 17.5px;
         line-height: 1.9rem;
     }
 
